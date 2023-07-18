@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #415365;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url(../img/pexels-min-an-913416.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+}
+
+button{
+    background-color: ghostwhite;
+    color: lightslategray;
+    border: 2px solid lightslategray;
+    padding: .3rem .6rem; /* rem se adapta à unidade de medida do??*/
+    font-size: 1rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: lightslategray;
+    color: white;
+}
+
+button:hover > i {
+    color: white;
+}
+
+button i {
+    color: #415365;
+    font-weight: bold;
+    pointer-events: none; /* desabilitar gatilhos do ícone pois ele está acima do botão / se o ícone é acionado, o botão não funciona*/
+}
+
+input, select {
+    font-size: .8rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* Header */
+.container{
+    width: 450px;
+    margin: auto;
+    background-color: hsla(240, 100%, 99%, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px  rgba(0, 0, 0, 0.24);
+}
+
+.container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 2px solid white;
+}
+
+/* Form */
+#form-tarefas, #edit-form{
+    padding: 1rem;
+    border-bottom: 2px solid white;
+}
+
+#form-tarefas p, #edit-form p{
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-controle{
+    display: flex;
+}
+
+.form-controle input{
+    margin-right: .3rem;
+}
+
+#cancela-edit{
+    margin-top: 1rem;
+}
+
+/* Barra de ferramentas */
+
+#ferramentas{
+    padding: 1rem;
+    border-bottom: 2px solid white;
+
+    display: flex;
+}
+
+#ferramentas h4{
+    margin-bottom: .5rem;
+}
+
+#busca{
+    border-right: 1px solid white;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#busca form{
+    display: flex;
+}
+
+#busca input{
+    width: 100%;
+    margin-right: .3rem;
+}
+
+#filtro {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filtro select{
+    flex: 1;
+}
+
+/* Lista de tarefas */
+
+.fazer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+    transition: .3s;
+}
+
+.fazer h3 {
+    flex: 1;
+    font-size: .9rem;
+}
+
+.fazer button{
+    margin-left: .4rem;
+}
+
+.feito {
+    background-color: #415365;
+}
+
+.feito h3{
+    color: white;
+    text-decoration: line-through;
+    font-style: italic;
+}
