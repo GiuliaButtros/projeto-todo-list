@@ -7,6 +7,8 @@ const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelaEdit = document.querySelector("#cancela-edit");
 
+const limparBusca = document.querySelector("#limpar-busca");
+
 let antigoInputValue;
 
 // FUNÇÕES
@@ -125,5 +127,9 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms();
+});
+
+limparBusca.addEventListener("click", (e) => {
+    e.preventDefault();
 });
 
